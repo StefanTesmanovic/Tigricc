@@ -92,7 +92,6 @@
 
 
 
-
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
@@ -146,12 +145,11 @@ html {
   font-size: 10px;
   scroll-behavior: smooth;
 }
-
 body {
   background-color: var(--white);
   font-size: 1.6rem;
   line-height: 1.8;
-  overflow-x: hidden;
+  overflow:block;
 }
 
 ::-webkit-scrollbar { width: 13px; }
@@ -159,7 +157,6 @@ body {
 ::-webkit-scrollbar-track { background-color: hsl(0, 0%, 95%); }
 
 ::-webkit-scrollbar-thumb { background-color: var(--pistachio); }
-
 
 
 
@@ -1469,6 +1466,12 @@ body {
 /*************************************************************************************************
 **************************************************************************************************
 **************************************************************************************************/
+.shrink{
+  -webkit-transform:scale(0.8);
+  -moz-transform:scale(0.8);
+  -ms-transform:scale(0.8);
+  transform:scale(0.8);
+  }
 #Calendarr
 {
     --dark-body: #4d4c5a;
@@ -1484,11 +1487,14 @@ body {
     --blue: #007497;
     --white: #fff;
     --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    height: 100vh;
-    display: grid;
+    display: flex;
     place-items: center;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
     font-family: var(--font-family);
     background-color: var(--bg-body);
+    overflow: block;
 }
 .light {
     --bg-body: var(--light-body);
@@ -1509,9 +1515,8 @@ body {
     width: max-content;
     background-color: var(--bg-main);
     border-radius: 30px;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
+    position: absolute;
+    overflow: block;
 }
 
 .light .calendar {
