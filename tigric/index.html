@@ -27,7 +27,7 @@
     rel="stylesheet">
 </head>
 
-<body>
+<body >
 
   <!-- 
     - #HEADER
@@ -56,7 +56,7 @@
 
           <li>
             <a href="#home" class="navbar-link" data-nav-link>
-              <span>Home</span>
+              <span>Početna</span>
 
               <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
             </a>
@@ -64,7 +64,7 @@
 
           <li>
             <a href="#about" class="navbar-link" data-nav-link>
-              <span>About</span>
+              <span>O nama</span>
 
               <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
             </a>
@@ -72,15 +72,15 @@
 
           <li>
             <a href="#service" class="navbar-link" data-nav-link>
-              <span>Service</span>
+              <span>Usluge</span>
 
               <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
             </a>
           </li>
 
           <li>
-            <a href="#donate" class="navbar-link" data-nav-link>
-              <span>Donate</span>
+            <a href="#calskrol" class="navbar-link" data-nav-link>
+              <span>Rezerviši</span>
 
               <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
             </a>
@@ -88,15 +88,15 @@
 
           <li>
             <a href="#event" class="navbar-link" data-nav-link>
-              <span>Event</span>
+              <span>Lokacija</span>
 
               <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
             </a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link" data-nav-link>
-              <span>Contact</span>
+            <a href="#kontaktskrol" class="navbar-link" data-nav-link>
+              <span>Kontakt</span>
 
               <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
             </a>
@@ -108,16 +108,13 @@
 
       <div class="header-action">
 
-        <button class="search-btn" aria-label="Search">
-          <ion-icon name="search-outline"></ion-icon>
-        </button>
+        <a href="#Calendarr">
+          <button class="btn btn-primary">
+            <span>Rezerviši</span>
 
-        <button class="btn btn-primary">
-          <span>Donation</span>
-
-          <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-        </button>
-
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </a>
       </div>
 
     </div>
@@ -152,13 +149,13 @@
             suspendisse
             ultrices gravida.
           </p>
-
+          <a href="#Calendarr">
           <button class="btn btn-primary">
             <span>Rezervacije</span>
 
-            <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
           </button>
-
+        </a>
         </div>
       </section>
 
@@ -635,22 +632,14 @@
 
             <li>
               <div class="event-card">
-
-                
-
                 <div class="wrapper">
 
                   <div class="card-content">
                     <p class="card-subtitle">Naša Lokacija</p>
 
-                    <h3 class="card-title">Mali Kalemegdan 8, Belgrade 11000, Serbia Belgrade RS, 11000</h3>
+                    <h3 id="kontaktskrol" class="card-title">Mali Kalemegdan 8, Belgrade 11000, Serbia Belgrade RS, 11000</h3>
                   </div>
-
-                  <button class="btn btn-white">
-                    <span>Vidi Lokaciju</span>
-
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </button>
+                  <iframe id="mapa"   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2829.745542693484!2d20.4501241!3d44.8267483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a654c0b560db1%3A0xadb45e5467d7b453!2z0KLQuNCz0LDRgA!5e0!3m2!1ssr!2srs!4v1699532906000!5m2!1ssr!2srs" width="20%" height="120%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 </div>
 
@@ -661,8 +650,12 @@
         </div>
       </section>
 
-  <div id="Calendarr" class="light section">
-    <div class="calendar shrink">
+  <div style="height: fit-content; text-align: center;">
+    <pre id="calskrol">&#128337 pon-ned: 9:00-20:00
+&#128222 063 733 9988</pre>
+  </div>
+  <div id="Calendarr" class="light" style="margin-bottom: 40px;" >
+    <div class="calendar shrink container">
       <div class="calendar-header">
           <span class="month-picker" id="month-picker">Novembar</span>
           <div class="year-picker">
@@ -691,7 +684,19 @@
       <div class="month-list"></div>
     </div>
   </div>
+  <div id="div-termini-box">
+  <ul id="termini-box">
+    <li class="termini">
 
+    </li>
+    <li class="termini">
+
+    </li >
+    <li class="termini">
+
+    </li>
+  </ul>
+  </div>
   <script>
 let calendar = document.querySelector('.calendar')
 
@@ -738,9 +743,11 @@ for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 2; i++) {
       if (i - first_day.getDay() + 2 === currDate.getDate() && year === currDate.getFullYear() && month === currDate.getMonth()) {
           day.classList.add('curr-date')
       }
+      day.classList.add('overflou')
   }
   calendar_days.appendChild(day)
 }
+document.querySelector('#Calendarr').style.height = String(document.querySelector(".calendar").offsetHeight)
 }
 
 let month_list = calendar.querySelector('.month-list')

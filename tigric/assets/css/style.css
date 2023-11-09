@@ -6,10 +6,6 @@
  * copyright 2022 codewithsadee
  */
 
-section {
-  width: 100%;
-}
-
 
 
 /*-----------------------------------*\
@@ -142,6 +138,7 @@ button { cursor: pointer; }
 ::selection { background-color: var(--white_10); }
 
 html {
+  overflow-x: hidden;
   font-family: var(--ff-roboto);
   color: var(--granite-gray);
   font-size: 10px;
@@ -149,9 +146,9 @@ html {
 }
 body {
   background-color: var(--white);
+  width: 100vw;
   font-size: 1.6rem;
   line-height: 1.8;
-  overflow:block;
 }
 
 ::-webkit-scrollbar { width: 13px; }
@@ -265,12 +262,12 @@ body {
 .header-action { display: none; }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   background-color: transparent;
-  padding-block: 18px;
+  padding-block: 0;
   z-index: 4;
 }
 
@@ -286,6 +283,7 @@ body {
 }
 
 .header.active {
+  position: sticky;
   background-color: var(--eerie-black-1);
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.8);
 }
@@ -296,7 +294,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  gap: 0px;
 }
 
 .logo {
@@ -316,7 +314,7 @@ body {
   background-color: var(--eerie-black-1);
   top: 100%;
   left: 0;
-  width: 100%;
+  width: 78%;
   height: 100%;
   outline: 1px solid var(--white_10);
   display: flex;
@@ -643,7 +641,7 @@ body {
 
 .donate-list {
   display: grid;
-  gap: 60px;
+  gap: 10px;
 }
 
 .donate-card { box-shadow: var(--card-shadow); }
@@ -652,7 +650,7 @@ body {
 
 .donate-card .card-content {
   background-color: var(--white);
-  padding: 35px;
+  padding: 20px;
 }
 
 .progress-wrapper {
@@ -682,7 +680,7 @@ body {
 
 .progress {
   height: 6px;
-  width: 83%;
+  width: 80%;
   background-color: var(--pistachio);
   border-radius: inherit;
 }
@@ -706,7 +704,7 @@ body {
   display: flex;
   gap: 5px;
 }
-
+inline
 .donate-card .card-wrapper-text span {
   color: var(--sonic-silver);
   font-weight: var(--fw-500);
@@ -790,7 +788,7 @@ body {
   #EVENT
 \*-----------------------------------*/
 
-.event { padding-block-end: 120px; }
+.event { padding-block-end: 0px; }
 
 .event .section-subtitle { justify-content: center; }
 
@@ -802,12 +800,12 @@ body {
 .event-list {
   display: grid;
   gap: 30px;
-  margin-block-end: 70px;
+  margin-block-end: 3px;
 }
 
 .event-card {
   border: 1px solid var(--platinum);
-  padding: 40px 30px;
+  padding: 10px 30px;
   border-radius: 2px;
   outline: 3px solid transparent;
   transition: var(--transition-2);
@@ -960,12 +958,23 @@ body {
  * responsive for larger than 450px screen
  */
 
-@media (min-width: 450px) {
+@media (min-width: 50px) {
 
   /**
    * CUSTOM PROPERTY
    */
-
+  #mapa{
+    width: 100%;
+  }
+  #div-termini-box{
+    display:flex; 
+    width: fit-content;
+    margin:auto;
+  }
+  #termini-box{
+    display: table;
+    width:100%;
+  }
   :root {
 
     /**
@@ -975,7 +984,6 @@ body {
     --fs-3: 4rem;
 
   }
-
 
 
   /**
@@ -994,12 +1002,14 @@ body {
  * responsive for larger than 580px screen
  */
 
-@media (min-width: 580px) {
+@media (min-width: 350px) {
 
   /**
    * CUSTOM PROPERTY
    */
-
+   #mapa{
+    width: 100%;
+  }
   :root {
 
     /**
@@ -1009,7 +1019,10 @@ body {
     --fs-2: 5.5rem;
 
   }
+  .shrink{
 
+  transform:scale(0.95);
+  }
 
 
   /**
@@ -1318,7 +1331,7 @@ body {
  * responsive for larger than 1200px screen
  */
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
 
   /**
    * CUSTOM PROPERTY
@@ -1333,8 +1346,16 @@ body {
     --fs-3: 4.4rem;
 
   }
-
-
+  #div-termini-box{
+    width: 100%;
+  }
+  #termini-box{
+    display: flex;
+    justify-content: space-evenly;
+    height: fit-content;
+    width: 100%;
+    padding: 20px 0px;
+  }
 
   /**
    * REUSED STYLE
@@ -1469,8 +1490,16 @@ body {
 **************************************************************************************************
 **************************************************************************************************/
 .shrink{
-  transform:scale(0.9);
+  transform:scale(0.95);
   }
+.calendar-after-create{
+  height: 200vh;
+  background-color: blue;
+}
+.overfou{
+  overflow: block;
+}
+
 #Calendarr
 {
     --dark-body: #4d4c5a;
@@ -1487,12 +1516,11 @@ body {
     --white: #fff;
     --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
-    place-items: center;
-    height: 100vh;
     justify-content: center;
+    height: 60vh;
     width: 100%;
     font-family: var(--font-family);
-    background-color: var(--bg-body);
+    background-color: white;
     overflow: block;
 }
 .light {
@@ -1727,4 +1755,13 @@ body {
 
 .month-list > div > div:hover {
     background-color: var(--color-hover);
+}
+
+.termini{
+  display: inline-block;
+  height: 300px;
+  width: 100%;
+  min-width: 100px;
+  max-width: 350px;
+  background-color: #009744;
 }
