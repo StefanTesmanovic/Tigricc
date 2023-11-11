@@ -1759,9 +1759,14 @@ inline
 
 .termini{
   display: inline-block;
+  text-align: center;
   height: 300px;
   width: 100%;
+  margin-bottom: 10px;
   min-width: 100px;
   max-width: 350px;
   background-color: #009744;
+}
+.termini H1{
+  color:black;
 }
