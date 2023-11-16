@@ -132,7 +132,9 @@
       -->
 
       <section class="hero" id="home">
-        <div class="container">
+        <div class="slika" id="slika1" style="left:0;"> <img src="assets/images/hero0.jpg" style="width: 100%;" > </div>
+        <div class="slika" id="slika2" style="left: 100%;"> <img src="assets/images/hero1.jpg" style="width: 100%;"> </div>
+        <div class="container" style="z-index: 2;">
 
 
           <h2 class="h1 hero-title">
@@ -163,14 +165,14 @@
       <section class="section features">
         <div class="container">
 
-          <ul class="features-list">
+          <ul style="visibility: hidden;" class="features-list">
 
-            <li class="features-item">
+            <li  class="features-item">
               <div class="item-icon">
                 <ion-icon name="shield-checkmark-outline"></ion-icon>
               </div>
 
-              <div>
+              <div style="z-index: 2;">
                 <h3 class="h4 item-title">Lorem ipsum</h3>
 
                 <p class="item-text">
@@ -185,7 +187,7 @@
                 <ion-icon name="water-outline"></ion-icon>
               </div>
 
-              <div>
+              <div style="z-index: 2;">
                 <h3 class="h4 item-title">Lorem ipsum</h3>
 
                 <p class="item-text">
@@ -200,7 +202,7 @@
                 <ion-icon name="leaf-outline"></ion-icon>
               </div>
 
-              <div>
+              <div style="z-index: 2;">
                 <h3 class="h4 item-title">Lorem ipsum</h3>
 
                 <p class="item-text">
@@ -215,7 +217,7 @@
                 <ion-icon name="snow-outline"></ion-icon>
               </div>
 
-              <div>
+              <div style="z-index: 2;">
                 <h3 class="h4 item-title">Lorem ipsum</h3>
 
                 <p class="item-text">
@@ -320,7 +322,7 @@
 
               </ul>
 
-              <button class="btn btn-secondary">
+              <button style="display: none;" class="btn btn-secondary">
                 <span>Vise O Nama</span>
 
                 <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
@@ -362,7 +364,7 @@
         </div>
       </section>
       <section class="section service" id="service" style="background-image: url('./assets/images/service-map.png')">
-        <div class="container">
+        <div class="container" style="height: fit-content;">
 
           <p class="section-subtitle">
             <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
@@ -374,10 +376,10 @@
             Jedinstvene proslave rođendana <strong>U srcu glavnog grada</strong>
           </h2>
 
-          <ul class="service-list">
+          <ul class="service-list" id="services">
 
             <li>
-              <div class="service-card">
+              <div class="service-card" id="service1">
 
                 <div class="card-icon">
                   <ion-icon name="leaf-outline"></ion-icon>
@@ -389,7 +391,7 @@
                   Animatori, plesači i mađioničari će konstantno zabavljati vašu decu i držati im pažnju
                 </p>
 
-                <a href="#" class="btn-link">
+                <a href="#service1" class="btn-link" onclick="cardOpen(1)">
                   <span>Pročitaj više</span>
 
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -399,7 +401,7 @@
             </li>
 
             <li>
-              <div class="service-card">
+              <div class="service-card" id="service2">
 
                 <div class="card-icon">
                   <ion-icon name="earth-outline"></ion-icon>
@@ -411,7 +413,7 @@
                   Beo zoo vrt, poznat i kao Vrt dobre nade je jedan od najboljih zooloških vrtova u regionu i pun je raznovrsnih vrsta životinja
                 </p>
 
-                <a href="#" class="btn-link">
+                <a href="#service2" class="btn-link" onclick="cardOpen(2)">
                   <span>Pročitaj Više</span>
 
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -421,7 +423,7 @@
             </li>
 
             <li>
-              <div class="service-card">
+              <div class="service-card" id="service3">
 
                 <div class="card-icon">
                   <ion-icon name="flower-outline"></ion-icon>
@@ -433,7 +435,7 @@
                   Izazov za mališane, neka se osećaju moćno i neka se malo aktiviraju u bezbednim uslovima našeg adrenalin parka
                 </p>
 
-                <a href="#" class="btn-link">
+                <a href="#service3" class="btn-link" onclick="cardOpen(3)">
                   <span>Pročitaj više</span>
 
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -443,7 +445,7 @@
             </li>
 
             <li>
-              <div class="service-card">
+              <div class="service-card"  id="service4">
 
                 <div class="card-icon">
                   <ion-icon name="boat-outline"></ion-icon>
@@ -455,7 +457,7 @@
                   Jedan od omiljenih sadržaja za decu na rođendanima je sigurno, crtanje po licu, vaše dete ćemo pretvoriti u njegovog omiljenog fiktivnog lika
                 </p>
 
-                <a href="#" class="btn-link">
+                <a href="#service4" class="btn-link" onclick="cardOpen(4)">
                   <span>Pročitaj više</span>
 
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -467,11 +469,7 @@
           </ul>
 
         </div>
-      </section>
-
-
-
-
+      </section>    
 
       <!-- 
         - #DONATE
