@@ -100,3 +100,39 @@ function showSlides2(n) {
     slides[slideIndex2-1].style.display = "block"; 
   }
 
+
+  /*ovo je kod nekoga ko zna sta radi*/
+
+  let otvoreni = [0, 0, 0, 0]
+  function cardOpen( idx ) {
+    let card = document.getElementById('service' + idx);
+    let p = card.children[2];
+    let link = card.children[3];
+
+    if ( otvoreni[idx - 1] == 0 ) {
+        link.innerHTML = '<span>Sakrij</span><ion-icon name="arrow-up" aria-hidden="true"></ion-icon>'
+        p.style.whiteSpace = "normal";
+        p.style.maxWidth = "fit-content";
+        otvoreni[idx - 1] = 1;
+      } else {
+        link.innerHTML = '<span>Pročitaj više</span><ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>'
+        p.style.whiteSpace = "nowrap";
+        p.style.maxWidth = "200px";
+        otvoreni[idx - 1] = 0;
+      }
+
+  }
+
+  let imgIdx = 1, imgNum = 4;
+  let slika1 = document.getElementById("slika1");
+  let slika2 = document.getElementById("slika2");
+
+  slika2.addEventListener("animationiteration", function() {  
+    slika1.children[0].src = "./assets/images/hero" + imgIdx + ".jpg"
+    slika2.children[0].src = "./assets/images/hero" + (imgIdx + 1) % imgNum + ".jpg"
+    imgIdx++;
+    imgIdx = imgIdx % imgNum;
+    // console.log(slika1.style.backgroundImage);
+    // console.log("asdsadasd")
+  })
+
