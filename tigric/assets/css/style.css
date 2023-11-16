@@ -639,6 +639,10 @@ body {
   #DONATE
 \*-----------------------------------*/
 
+#donate{
+  background-color: var(--jet);
+}
+
 .donate-list {
   display: grid;
   gap: 10px;
@@ -788,7 +792,8 @@ inline
   #EVENT
 \*-----------------------------------*/
 
-.event { padding-block-end: 0px; }
+.event { 
+  padding-block-end: 0px; }
 
 .event .section-subtitle { justify-content: center; }
 
@@ -970,6 +975,9 @@ inline
     display:flex; 
     width: fit-content;
     margin:auto;
+    padding: 50px;
+    justify-content: space-evenly;
+    background-color: var(--jet);
   }
   #termini-box{
     display: table;
@@ -1760,16 +1768,20 @@ inline
 .termini{
   display: inline-block;
   text-align: center;
-  height: 300px;
+  height: 400px;
   width: 100%;
   margin-bottom: 10px;
   min-width: 100px;
-  max-width: 350px;
-  background-color: var(--pistachio);
+  max-width: 375x;
+  background-color: transparent;
+}
+.termini img{
+  max-height: 350px;
+  max-width: 100%;
 }
 .termini H1{
-  text-shadow: 2px 2px 0px black;
-  color:whitesmoke;
+  color:var(--pistachio);
+  overflow: visible;
 }
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
@@ -1785,20 +1797,16 @@ display: none;
 overflow:hidden;
 display: none;
 }
-img {vertical-align: middle;}
+img {vertical-align: middle;
+margin:auto;}
 
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
-  width: 30%;
-  min-width: 250px;
   position: relative;
   margin: auto;
-}
-
-.Galerija{
-  display: none;
-  margin-bottom: 30px;
+  overflow: hidden;
+  padding: 10px;
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -1818,7 +1826,7 @@ img {vertical-align: middle;}
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: 10px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -1843,7 +1851,7 @@ img {vertical-align: middle;}
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
-  position: absolute;
+  position: relative;
   top: 0;
 }
 

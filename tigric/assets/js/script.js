@@ -45,14 +45,7 @@ window.addEventListener("scroll", function () {
     : header.classList.remove("active");
 });
 
-function openGallery(evt, igraonica) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("Galerija");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  document.getElementById(igraonica).style.display = "block";
-}
+
 
 let slideIndex1 = 1;
 showSlides1(slideIndex1);
