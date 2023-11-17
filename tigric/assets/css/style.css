@@ -293,6 +293,7 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
+  width:100%;
   align-items: center;
   gap: 0px;
 }
@@ -314,7 +315,7 @@ body {
   background-color: var(--eerie-black-1);
   top: 100%;
   left: 0;
-  width: 78%;
+  width: 100%;
   height: 100%;
   outline: 1px solid var(--white_10);
   display: flex;
@@ -431,14 +432,14 @@ body {
 #slika1 { animation: slide1 5s infinite linear; }
 @keyframes slide1 {
   0% { left: 0%; } 
-  10% { left: -100%; }
+  7% { left: -100%; }
   100% { left: -100%; }
 }
 
 #slika2 { animation: slide2 5s infinite linear; }
 @keyframes slide2 {
   0% { left: 100%; } 
-  10% { left: 0%; }
+  7% { left: 0%; }
   100% { left: 0%; }
 }
 /*-----------------------------------*\
