@@ -116,7 +116,7 @@ time,
 input,
 strong,
 button,
-ion-icon { display: block; }
+ion-icon { display: block;}
 
 img { height: auto; }
 
@@ -281,9 +281,8 @@ body {
   height: 1px;
   background-color: var(--white_10);
 }
-
 .header.active {
-  position: sticky;
+  position: fixed;
   background-color: var(--eerie-black-1);
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.8);
 }
@@ -395,6 +394,7 @@ body {
   display: grid;
   align-items: center;
   transition: background-image 0.5s linear;
+  height: fit-content;
 }
 
 .hero .section-subtitle {
@@ -421,7 +421,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 110%;
+  height: 100%;
   overflow: hidden;
   z-index: -1;
   justify-content: center;
@@ -753,7 +753,9 @@ inline
 
 
 
-
+#skinipadding{
+  padding-top: 0cm;
+}
 
 /*-----------------------------------*\
   #TESTIMONIALS
@@ -1039,13 +1041,17 @@ inline
  * responsive for larger than 580px screen
  */
 
-@media (min-width: 350px) {
+@media (min-width: 310px) {
 
   /**
    * CUSTOM PROPERTY
    */
    #mapa{
     width: 100%;
+  }
+  
+  #logotig{
+    height: 60px;
   }
   :root {
 
@@ -1202,6 +1208,9 @@ inline
 
 @media (min-width: 992px) {
 
+  #logotig{
+    height: 80px;
+  }
   /**
    * CUSTOM PROPERTY
    */

@@ -123,7 +123,7 @@ function showSlides2(n) {
 
   }
 
-  let imgIdx = 1, imgNum = 4;
+  let imgIdx = 1, imgNum = 3;
   let slika1 = document.getElementById("slika1");
   let slika2 = document.getElementById("slika2");
 
