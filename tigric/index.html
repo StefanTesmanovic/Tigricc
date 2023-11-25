@@ -131,13 +131,12 @@
       <section class="hero" id="home">
         <div class="slika" id="slika1" style="left:0;"> <img src="assets/images/hero0.jpg" style="width: 100%;" > </div>
         <div class="slika" id="slika2" style="left: 100%;"> <img src="assets/images/hero1.jpg" style="width: 100%;"> </div>
-        <div class="container" style="z-index: 2;">
+        <div id="hero_container" class="container" style="z-index: 2;">
 
-
-          <h2 class="h1 hero-title">
-                 Rođendan sa životinjama!<strong>Tigrić Kafe</strong>
-          </h2>
-
+            <img src="assets/images/tigric_tekst.png" class="tigrictekst"/>
+          <h1 style="display: none;" class="h1 hero-title">
+                Rođendan sa životinjama!<strong>Tigrić Kafe</strong>
+          </h1>
           <p class="hero-text">
             Druženje sa životinjama i mnogobrojne aktivnosti učiniće svaku proslavu rođendana nezaboravnim iskustvom
           </p>
@@ -346,7 +345,7 @@
           <div class="cta-content">
             <h2 class="h2 section-title">Iza nas stoje hiljade zadovoljnih roditelja</h2>
 
-            <button class="btn btn-outline">
+            <button style="display: none;" class="btn btn-outline">
               <span>Pridruži nam se</span>
 
               <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
@@ -581,13 +580,13 @@
           <ul class="event-list">
 
             <li>
-              <div class="event-card">
+              <div id="kontaktskrol" class="event-card">
                 <div class="wrapper">
 
                   <div class="card-content">
                     <p class="card-subtitle">Naša Lokacija</p>
 
-                    <h3 id="kontaktskrol" class="card-title">Mali Kalemegdan 8, Belgrade 11000, Serbia Belgrade RS, 11000</h3>
+                    <h3 class="card-title">Mali Kalemegdan 8, Belgrade 11000, Serbia Belgrade RS, 11000</h3>
                   </div>
                   <iframe id="mapa"   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2829.745542693484!2d20.4501241!3d44.8267483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a654c0b560db1%3A0xadb45e5467d7b453!2z0KLQuNCz0LDRgA!5e0!3m2!1ssr!2srs!4v1699532906000!5m2!1ssr!2srs" width="20%" height="120%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
@@ -600,7 +599,7 @@
         </div>
       </section>
 
-  <div style="height: fit-content; text-align: center;">
+  <div style="height: fit-content; text-align: center; font-size: 30px;">
     <a href="tel:063 733 9988"><pre id="calskrol">&#128337 pon-ned: 9:00-20:00
 &#128222 063 733 9988</pre></a>
   </div>

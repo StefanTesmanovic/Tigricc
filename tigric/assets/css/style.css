@@ -177,7 +177,10 @@ body {
 }
 
 .h1,
-.h2 { font-weight: var(--fw-300); }
+.h2 { 
+  font-size: var(--fs-3);
+  font-weight: var(--fw-300); 
+}
 
 .h2,
 .h3 { line-height: 1.6; }
@@ -407,6 +410,10 @@ body {
   font-size: var(--fs-2);
   margin-block: 30px;
   line-height: 1.2;
+  text-shadow: -1px 1px 0 #000, 
+                          1px 1px 0 #000, 
+                         1px -1px 0 #000, 
+                        -1px -1px 0 #000;
 }
 
 .hero-text {
@@ -415,6 +422,10 @@ body {
   letter-spacing: -1px;
   max-width: 50ch;
   margin-block-end: 30px;
+  text-shadow: -1px 1px 0 #000, 
+                          1px 1px 0 #000, 
+                         1px -1px 0 #000, 
+                        -1px -1px 0 #000; 
 }
 
 .slika {
@@ -661,7 +672,7 @@ body {
   margin-block-start: 15px;
 }
 
-.btn-link span { text-decoration: underline; }
+.btn-link span { text-decoration: underline; cursor: pointer;}
 
 
 /*-----------------------------------*\
@@ -1911,7 +1922,7 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .service-readmore {
     position: fixed;
   top: 50%;
@@ -1923,6 +1934,15 @@ img {vertical-align: middle;}
   margin-top: -9em;
   margin-left: -50%;
   }
+  #hero_container{
+    text-align: center;
+  }
+  #hero_container button{
+    margin: auto;
+  }
+  .tigrictekst{
+    width: 100%;
+  }
 }
 @media (max-aspect-ratio: 1/1) {
   .slika {
@@ -1931,4 +1951,8 @@ img {vertical-align: middle;}
   .hero {
     background-color: var(--eerie-black-1);
   }
+}
+
+.tigrictekst{
+  max-width: 500px;
 }

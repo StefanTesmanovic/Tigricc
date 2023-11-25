@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image with Edge Fade</title>
+  <style>
+    /* Container for the image and overlay */
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* The image */
+    .image-container img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* The overlay */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Allow clicking through the overlay to the underlying content */
+    }
+
+    /* Radial gradient pseudo-element for edge fade */
+    .overlay::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0), rgb(102, 18, 18)); /* Adjust the opacity by changing the last value */
+    }
+    body{
+        background-color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-container">
+    <!-- Your image goes here -->
+    <img src="assets/images/tigric_tekst.png" alt="Your Image">
+
+    <!-- Overlay with radial gradient pseudo-element -->
+    <div class="overlay"></div>
+  </div>
+
+</body>
+</html>
