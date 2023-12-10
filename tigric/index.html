@@ -10,7 +10,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/svg+xml">
 
   <!-- 
     - custom css link
@@ -35,10 +35,7 @@
 
   <header class="header" data-header>
     <div class="container">
-
-      <h1>
-        <a href="#" class="logo">Tigrić</a>
-      </h1>
+          <a href="#"  class="logo"><img id="logotig" src="./assets/images/Tigric_logo.png" alt="{Logo}" style="float:left; margin-top: 5px; margin-right: 5px; display: block;"/></a>
 
       <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
         <ion-icon name="menu-outline"></ion-icon>
@@ -134,18 +131,17 @@
       <section class="hero" id="home">
         <div class="slika" id="slika1" style="left:0;"> <img src="assets/images/hero0.jpg" style="width: 100%;" > </div>
         <div class="slika" id="slika2" style="left: 100%;"> <img src="assets/images/hero1.jpg" style="width: 100%;"> </div>
-        <div class="container" style="z-index: 2;">
+        <div id="hero_container" class="container" style="z-index: 2;">
 
-
-          <h2 class="h1 hero-title">
-                 Rođendan sa životinjama!<strong>Tigrić Kafe</strong>
-          </h2>
-
+            <img src="assets/images/tigric_tekst.png" class="tigrictekst"/>
+          <h1 style="display: none;" class="h1 hero-title">
+                Rođendan sa životinjama!<strong>Tigrić Kafe</strong>
+          </h1>
           <p class="hero-text">
             Druženje sa životinjama i mnogobrojne aktivnosti učiniće svaku proslavu rođendana nezaboravnim iskustvom
           </p>
           <a href="#kontaktskrol">
-          <button class="btn btn-primary">
+          <button class="btn btn-primary" style="margin: auto; margin-top: 50px;">
             <span>Rezervacije</span>
 
             <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
@@ -162,12 +158,12 @@
         - #FEATURES
       -->
 
-      <section class="section features">
-        <div class="container">
+      <section id="skinipadding" style="display: none; padding-top: 0px;" class="section features">
+        <div  class="container">
 
           <ul class="features-list">
 
-            <li class="features-item">
+            <li  class="features-item">
               <div class="item-icon">
                 <ion-icon name="shield-checkmark-outline"></ion-icon>
               </div>
@@ -240,7 +236,7 @@
         - #ABOUT
       -->
 
-      <section class="section about" id="about">
+      <section style="display: block;" class="section about" id="about">
         <div class="container">
 
           <div class="about-banner">
@@ -321,13 +317,13 @@
                 </li>
 
               </ul>
-
+              <a href="https://www.instagram.com/tigric_kafe_rodjendaonica/" target="_blank">
               <button class="btn btn-secondary">
-                <span>Vise O Nama</span>
+                <span>Više O Nama</span>
 
-                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
               </button>
-
+              </a>
             </div>
 
           </div>
@@ -349,7 +345,7 @@
           <div class="cta-content">
             <h2 class="h2 section-title">Iza nas stoje hiljade zadovoljnih roditelja</h2>
 
-            <button class="btn btn-outline">
+            <button style="display: none;" class="btn btn-outline">
               <span>Pridruži nam se</span>
 
               <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
@@ -382,7 +378,7 @@
               <div class="service-card" id="service1">
 
                 <div class="card-icon">
-                  <ion-icon name="leaf-outline"></ion-icon>
+                  <ion-icon name="person-outline"></ion-icon>
                 </div>
 
                 <h3 class="h3 card-title">Animatori</h3>
@@ -391,7 +387,7 @@
                   Animatori, plesači i mađioničari će konstantno zabavljati vašu decu i držati im pažnju
                 </p>
 
-                <a href="#service1" class="btn-link" onclick="cardOpen(1)">
+                <a class="btn-link" onclick="cardOpen(1)">
                   <span>Pročitaj više</span>
 
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -404,7 +400,7 @@
               <div class="service-card" id="service2">
 
                 <div class="card-icon">
-                  <ion-icon name="earth-outline"></ion-icon>
+                  <ion-icon name="walk-outline"></ion-icon>
                 </div>
 
                 <h3 class="h3 card-title">Šetnja zoo vrtom</h3>
@@ -413,7 +409,7 @@
                   Beo zoo vrt, poznat i kao Vrt dobre nade je jedan od najboljih zooloških vrtova u regionu i pun je raznovrsnih vrsta životinja
                 </p>
 
-                <a href="#service2" class="btn-link" onclick="cardOpen(2)">
+                <a class="btn-link" onclick="cardOpen(2)">
                   <span>Pročitaj Više</span>
 
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -426,7 +422,7 @@
               <div class="service-card" id="service3">
 
                 <div class="card-icon">
-                  <ion-icon name="flower-outline"></ion-icon>
+                  <ion-icon name="happy-outline"></ion-icon>
                 </div>
 
                 <h3 class="h3 card-title">Adrenalin park</h3>
@@ -435,7 +431,7 @@
                   Izazov za mališane, neka se osećaju moćno i neka se malo aktiviraju u bezbednim uslovima našeg adrenalin parka
                 </p>
 
-                <a href="#service3" class="btn-link" onclick="cardOpen(3)">
+                <a class="btn-link" onclick="cardOpen(3)">
                   <span>Pročitaj više</span>
 
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -448,7 +444,7 @@
               <div class="service-card"  id="service4">
 
                 <div class="card-icon">
-                  <ion-icon name="boat-outline"></ion-icon>
+                  <ion-icon name="brush-outline"></ion-icon>
                 </div>
 
                 <h3 class="h3 card-title">Face painting</h3>
@@ -457,7 +453,7 @@
                   Jedan od omiljenih sadržaja za decu na rođendanima je sigurno, crtanje po licu, vaše dete ćemo pretvoriti u njegovog omiljenog fiktivnog lika
                 </p>
 
-                <a href="#service4" class="btn-link" onclick="cardOpen(4)">
+                <a class="btn-link" onclick="cardOpen(4)">
                   <span>Pročitaj više</span>
 
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -584,13 +580,13 @@
           <ul class="event-list">
 
             <li>
-              <div class="event-card">
+              <div id="kontaktskrol" class="event-card">
                 <div class="wrapper">
 
                   <div class="card-content">
                     <p class="card-subtitle">Naša Lokacija</p>
 
-                    <h3 id="kontaktskrol" class="card-title">Mali Kalemegdan 8, Belgrade 11000, Serbia Belgrade RS, 11000</h3>
+                    <h3 class="card-title">Mali Kalemegdan 8, Belgrade 11000, Serbia Belgrade RS, 11000</h3>
                   </div>
                   <iframe id="mapa"   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2829.745542693484!2d20.4501241!3d44.8267483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a654c0b560db1%3A0xadb45e5467d7b453!2z0KLQuNCz0LDRgA!5e0!3m2!1ssr!2srs!4v1699532906000!5m2!1ssr!2srs" width="20%" height="120%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
@@ -603,7 +599,7 @@
         </div>
       </section>
 
-  <div style="height: fit-content; text-align: center;">
+  <div style="height: fit-content; text-align: center; font-size: 30px;">
     <a href="tel:063 733 9988"><pre id="calskrol">&#128337 pon-ned: 9:00-20:00
 &#128222 063 733 9988</pre></a>
   </div>
@@ -857,7 +853,7 @@ generateCalendar(curr_month.value, curr_year.value)
         <ul class="insta-post-list">
 
           <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
+            <a href="https://www.instagram.com/tigric_kafe_rodjendaonica/" target="_blank" class="insta-post-link">
               <img src="./assets/images/insta-1.jpg" width="320" height="300" loading="lazy" alt="Lion"
                 class="img-cover">
 
@@ -866,7 +862,7 @@ generateCalendar(curr_month.value, curr_year.value)
           </li>
 
           <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
+            <a href="https://www.instagram.com/tigric_kafe_rodjendaonica/" target="_blank" class="insta-post-link">
               <img src="./assets/images/insta-2.jpg" width="320" height="300" loading="lazy" alt="Deer"
                 class="img-cover">
 
@@ -875,7 +871,7 @@ generateCalendar(curr_month.value, curr_year.value)
           </li>
 
           <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
+            <a href="https://www.instagram.com/tigric_kafe_rodjendaonica/" target="_blank" class="insta-post-link">
               <img src="./assets/images/insta-3.jpg" width="320" height="300" loading="lazy" alt="Wild Bear"
                 class="img-cover">
 
@@ -884,7 +880,7 @@ generateCalendar(curr_month.value, curr_year.value)
           </li>
 
           <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
+            <a href="https://www.instagram.com/tigric_kafe_rodjendaonica/" target="_blank" class="insta-post-link">
               <img src="./assets/images/insta-4.jpg" width="320" height="300" loading="lazy" alt="Deer"
                 class="img-cover">
 
@@ -893,7 +889,7 @@ generateCalendar(curr_month.value, curr_year.value)
           </li>
 
           <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
+            <a href="https://www.instagram.com/tigric_kafe_rodjendaonica/" target="_blank" class="insta-post-link">
               <img src="./assets/images/insta-5.jpg" width="320" height="300" loading="lazy" alt="Horses"
                 class="img-cover">
 
@@ -901,6 +897,14 @@ generateCalendar(curr_month.value, curr_year.value)
             </a>
           </li>
 
+          <li class="insta-post-item">
+            <a href="https://www.instagram.com/tigric_kafe_rodjendaonica/" target="_blank" class="insta-post-link">
+              <img src="./assets/images/insta-6.jpg" width="320" height="300" loading="lazy" alt="Horses"
+                class="img-cover">
+
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
         </ul>
 
       </section>

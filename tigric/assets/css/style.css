@@ -116,7 +116,7 @@ time,
 input,
 strong,
 button,
-ion-icon { display: block; }
+ion-icon { display: block;}
 
 img { height: auto; }
 
@@ -177,7 +177,10 @@ body {
 }
 
 .h1,
-.h2 { font-weight: var(--fw-300); }
+.h2 { 
+  font-size: var(--fs-3);
+  font-weight: var(--fw-300); 
+}
 
 .h2,
 .h3 { line-height: 1.6; }
@@ -281,9 +284,8 @@ body {
   height: 1px;
   background-color: var(--white_10);
 }
-
 .header.active {
-  position: sticky;
+  position: fixed;
   background-color: var(--eerie-black-1);
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.8);
 }
@@ -293,6 +295,7 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
+  width:100%;
   align-items: center;
   gap: 0px;
 }
@@ -314,7 +317,7 @@ body {
   background-color: var(--eerie-black-1);
   top: 100%;
   left: 0;
-  width: 78%;
+  width: 100%;
   height: 100%;
   outline: 1px solid var(--white_10);
   display: flex;
@@ -394,6 +397,7 @@ body {
   display: grid;
   align-items: center;
   transition: background-image 0.5s linear;
+  height: fit-content;
 }
 
 .hero .section-subtitle {
@@ -406,21 +410,35 @@ body {
   font-size: var(--fs-2);
   margin-block: 30px;
   line-height: 1.2;
+  text-shadow: -1px 1px 0 #000, 
+                          1px 1px 0 #000, 
+                         1px -1px 0 #000, 
+                        -1px -1px 0 #000;
+}
+
+.tigrictekst {
+  margin: auto;
+  margin-top: 50px;
 }
 
 .hero-text {
+  display: none;
   font-family: var(--ff-inter);
   font-size: var(--fs-8);
   letter-spacing: -1px;
   max-width: 50ch;
   margin-block-end: 30px;
+  text-shadow: -1px 1px 0 #000, 
+                          1px 1px 0 #000, 
+                         1px -1px 0 #000, 
+                        -1px -1px 0 #000; 
 }
 
 .slika {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 110%;
+  height: 100%;
   overflow: hidden;
   z-index: -1;
   justify-content: center;
@@ -431,14 +449,14 @@ body {
 #slika1 { animation: slide1 5s infinite linear; }
 @keyframes slide1 {
   0% { left: 0%; } 
-  50% { left: -100%; }
+  7% { left: -100%; }
   100% { left: -100%; }
 }
 
 #slika2 { animation: slide2 5s infinite linear; }
 @keyframes slide2 {
   0% { left: 100%; } 
-  50% { left: 0%; }
+  7% { left: 0%; }
   100% { left: 0%; }
 }
 /*-----------------------------------*\
@@ -660,7 +678,7 @@ body {
   margin-block-start: 15px;
 }
 
-.btn-link span { text-decoration: underline; }
+.btn-link span { text-decoration: underline; cursor: pointer;}
 
 
 /*-----------------------------------*\
@@ -752,7 +770,9 @@ inline
 
 
 
-
+#skinipadding{
+  padding-top: 0cm;
+}
 
 /*-----------------------------------*\
   #TESTIMONIALS
@@ -1038,13 +1058,17 @@ inline
  * responsive for larger than 580px screen
  */
 
-@media (min-width: 350px) {
+@media (min-width: 310px) {
 
   /**
    * CUSTOM PROPERTY
    */
    #mapa{
     width: 100%;
+  }
+  
+  #logotig{
+    height: 60px;
   }
   :root {
 
@@ -1107,7 +1131,7 @@ inline
    * INSTA POST
    */
 
-  .insta-post-item { min-width: 45%; }
+  .insta-post-item { min-width: 75%; }
 
 }
 
@@ -1201,6 +1225,9 @@ inline
 
 @media (min-width: 992px) {
 
+  #logotig{
+    height: 80px;
+  }
   /**
    * CUSTOM PROPERTY
    */
@@ -1247,6 +1274,7 @@ inline
     background-size: cover;
     background-position: left;
     min-height: 780px;
+    height: fit-content;
     
   }
 
@@ -1806,6 +1834,7 @@ inline
 .termini img{
   max-height: 350px;
   max-width: 100%;
+  margin:auto;
 }
 .termini H1{
   color:var(--pistachio);
@@ -1825,8 +1854,7 @@ display: none;
 overflow:hidden;
 display: none;
 }
-img {vertical-align: middle;
-margin:auto;}
+img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
@@ -1900,7 +1928,7 @@ margin:auto;}
   .prev, .next,.text {font-size: 11px}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .service-readmore {
     position: fixed;
   top: 50%;
@@ -1912,6 +1940,16 @@ margin:auto;}
   margin-top: -9em;
   margin-left: -50%;
   }
+  #hero_container{
+    text-align: center;
+  }
+  #hero_container button{
+    margin: auto;
+  }
+  .tigrictekst{
+    width: 100%;
+    margin-top: auto;
+  }
 }
 @media (max-aspect-ratio: 1/1) {
   .slika {
@@ -1920,4 +1958,11 @@ margin:auto;}
   .hero {
     background-color: var(--eerie-black-1);
   }
+  .hero-text {
+    display: block;
+  }
+}
+
+.tigrictekst{
+  max-width: 500px;
 }
